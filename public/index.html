@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnet Link Submit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container">
+    <h1 id="title">Enter Server Address</h1>
+    <form id="setupForm">
+        <div id="serverAddressStep">
+            <input type="text" id="serverAddress" placeholder="Enter server address" required>
+            <button type="button" id="submitServerAddress">Next</button>
+        </div>
+        <div id="hostJoinStep" class="hidden">
+            <button type="button" id="hostRoom">Host a Room</button>
+            <button type="button" id="joinRoom">Join a Room</button>
+        </div>
+        <div id="roomCodeStep" class="hidden">
+            <input type="text" id="roomCode" placeholder="Enter room code" required>
+            <button type="button" id="submitRoomCode">Next</button>
+        </div>
+        <div id="magnetLinkStep" class="hidden">
+            <input type="text" id="magnetLink" placeholder="Enter magnet link" required>
+            <button type="submit" id="submitMagnetLink">Submit</button>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

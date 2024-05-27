@@ -1,0 +1,25 @@
+{
+  "name": "torrenttogether",
+  "version": "1.0.0",
+  "description": "A client and server for streaming torrents with friends.",
+  "main": "client.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "electron ."
+  },
+  "author": "BumpkinPi",
+  "package": "webpack && electron-builder -mw",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^30.0.8"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "path": "^0.12.7",
+    "pump": "^3.0.0",
+    "range-parser": "^1.2.1",
+    "socket.io": "^4.7.5",
+    "torrent-stream": "^1.2.1"
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Together</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <video id="videoPlayer" controls width="800">
+        <source src="http://localhost:3000/video.mp4" type="video/mp4">
+    </video>
+    <div id="roomCodeContainer">
+        Room Code: <span id="roomCode"></span>
+    </div>
+</div>
+<script id="socketScript" src="http://localhost:3001/socket.io/socket.io.js"></script>
+
+<script src="videosync.js"></script>
+</body>
+</html>
