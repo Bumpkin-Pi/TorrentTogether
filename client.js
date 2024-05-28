@@ -82,7 +82,9 @@ function createWindow() {
         height: 700,
         webPreferences: {
             nodeIntegration: true,
-            webSecurity: false // Allow loading resources from other domains
+            contextIsolation: false,
+            enableRemoteModule: true,
+            webSecurity: false, // Allow loading resources from other domains
         }
     });
 
@@ -97,8 +99,13 @@ function createWindow() {
     mainWindow.on('closed', () => {
         mainWindow = null;
     });
+
+
+
+
     // mainWindow.setMenu(null);
 }
+
 
 app.on('ready', createWindow);
 

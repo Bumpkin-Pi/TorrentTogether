@@ -12,6 +12,8 @@ const PORT = process.env.PORT || 3001;
 const rooms = {};
 app.get('/magnet/:roomCode', (req, res) => {
     const roomCode = req.params.roomCode;
+    console.log("Magnet requested for room " + roomCode);
+
     // Check if the room exists and has a magnet link
     if (rooms[roomCode] && rooms[roomCode].magnetLink) {
         res.send(rooms[roomCode].magnetLink);

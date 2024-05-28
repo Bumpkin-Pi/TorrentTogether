@@ -90,7 +90,7 @@ function submitMagnetLink(magnetLink) {
                     roomCode: roomCode,
                     isHost: destination
                 });
-                window.location.href = `${serverAddress}/video.html?${queryParams}`;
+                window.location.href = `video.html?${queryParams}`;
             } else {
                 alert('Failed to submit magnet link.');
             }
