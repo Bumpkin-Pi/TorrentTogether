@@ -11,6 +11,8 @@ console.log(room)
 const socket = io.connect(serverAddress);
 document.getElementById('roomCode').textContent = room;
 
+
+
 socket.emit('joinRoom', room);
 
 if (isHost) {
@@ -26,6 +28,7 @@ if (isHost) {
 
 let serverEvent = false;
 let seekingLocally = false;
+
 let seekTimer;
 
 // Listen for play event
@@ -69,6 +72,7 @@ socket.on('seek', time => {
 
 socket.on('play', () => {
     if (!serverEvent && video.paused) {
+        console.log("Server says play uwu")
         serverEvent = true;
         video.play();
         serverEvent = false;
@@ -77,8 +81,12 @@ socket.on('play', () => {
 
 socket.on('pause', () => {
     if (!serverEvent && !video.paused) {
+        console.log("Server says pause uwu")
         serverEvent = true;
         video.pause();
         serverEvent = false;
     }
 });
+
+
+

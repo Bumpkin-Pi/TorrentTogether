@@ -2,13 +2,12 @@ const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
 const {join} = require("path");
-
+require('dotenv').config()
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
 app.use(express.static(join(__dirname, 'public')));
 const PORT = process.env.PORT || 45323;
-
 const rooms = {};
 app.get('/magnet/:roomCode', (req, res) => {
     const roomCode = req.params.roomCode;
