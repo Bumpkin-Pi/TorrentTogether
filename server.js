@@ -1,11 +1,12 @@
 const express = require('express');
 const http = require('http');
 const socketIo = require('socket.io');
+const {join} = require("path");
 
 const app = express();
 const server = http.createServer(app);
 const io = socketIo(server);
-
+app.use(express.static(join(__dirname, 'public')));
 const PORT = process.env.PORT || 3001;
 
 const rooms = {};
